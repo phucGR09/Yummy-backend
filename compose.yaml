@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: yummy
+    ports:
+      - "3360:3306"
+    volumes:
+      - mysql-data-yummy:/var/lib/mysql
+
+volumes:
+  mysql-data-yummy:
